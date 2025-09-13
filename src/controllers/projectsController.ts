@@ -1,7 +1,16 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 
-export const getAllProjects = (req: Request, res: Response) => {
-  res.status(200).json({ message: "Get all projects" });
+export const getAllProjects = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    throw new Error("OOps!!");
+    res.status(200).json({ message: "Get all projects" });
+  } catch (error) {
+    next(error);
+  }
 };
 
 export const getProjectById = (req: Request, res: Response) => {
