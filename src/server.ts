@@ -13,7 +13,7 @@ export const createServer = () => {
     .use(cors());
 
   app.get("/health", (req: Request, res: Response) => {
-    res.json({ ok: true });
+    res.json({ ok: true, environment: process.env.NODE_ENV });
   });
 
   return app;
