@@ -6,7 +6,6 @@ export const getAllProjects = async (
   next: NextFunction,
 ) => {
   try {
-    throw new Error("OOps!!");
     res.status(200).json({ message: "Get all projects" });
   } catch (error) {
     next(error);
