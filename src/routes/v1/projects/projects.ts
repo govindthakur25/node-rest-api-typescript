@@ -6,13 +6,15 @@ import {
   updateProject,
   deleteProject,
 } from "../../../controllers/projectsController";
+import authenticateUser from "../../../middleware/authenticateUser";
 
-const router = Router();
+const projects = Router();
 
-router.get("/", getAllProjects);
-router.get("/:id", getProjectById);
-router.post("/", createProject);
-router.put("/:id", updateProject);
-router.delete("/:id", deleteProject);
+projects.use(authenticateUser);
+projects.get("/", getAllProjects);
+projects.get("/:id", getProjectById);
+projects.post("/", createProject);
+projects.put("/:id", updateProject);
+projects.delete("/:id", deleteProject);
 
-export default router;
+export default projects;
