@@ -1,4 +1,4 @@
 import CustomError from "./CustomError";
+import type { ErrorCode } from "./types";
 
-class EntityNotFoundError extends CustomError<"ERR_NF" | "ERR_VALID"> {}
-export default EntityNotFoundError;
+export default class EntityNotFoundError extends CustomError<ErrorCode> {}
