@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
-import prisma from "../prisma-client";
-import EntityNotFoundError from "../errors/EntityNotFoundError";
+import prisma from "~/prisma-client";
+import EntityNotFoundError from "~/errors/EntityNotFoundError";
 
 export const getAllProjects = async (
   req: Request,
