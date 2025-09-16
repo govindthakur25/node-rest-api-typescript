@@ -5,6 +5,7 @@ const config = {
   appSecret: process.env.APP_SECRET || "",
   issuerBaseUrl: process.env.ISSUER_BASE_URL || "",
   audience: process.env.AUDIENCE || "",
+  logLevel: process.env.LOG_LEVEL || "info",
 };
 
 export default config;
