@@ -5,8 +5,8 @@ import {
   createProject,
   updateProject,
   deleteProject,
-} from "../../../controllers/projectsController";
-import authenticateUser from "../../../middleware/authenticateUser";
+} from "~/controllers/projectsController";
+import authenticateUser from "~/middleware/authenticateUser";
 
 const projects = Router();
 
